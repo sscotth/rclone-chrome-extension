@@ -1,5 +1,6 @@
-chrome.storage.sync.get(['password', 'salt'], passwords => {
+/* global chrome, rclone */
 
+chrome.storage.sync.get(['password', 'salt'], passwords => {
   const decryptor = rclone.Rclone(passwords).then(o => o.Path.decryptName)
 
   const decryptElement = (el) =>
@@ -20,5 +21,4 @@ chrome.storage.sync.get(['password', 'salt'], passwords => {
   btn.addEventListener('click', decryptAllFileAndFolderNames)
 
   document.querySelector('[aria-label="New"]').insertAdjacentElement('afterend', btn)
-
 })

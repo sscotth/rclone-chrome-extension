@@ -1,3 +1,5 @@
+/* global chrome */
+
 document.addEventListener('DOMContentLoaded', () => {
   restoreOptions()
 
