@@ -1,0 +1,31 @@
+{
+  "manifest_version": 2,
+  "name": "Rclone decrypter",
+  "description": "This extension allows the user to decrypt filenames encrypted by Rclone.",
+  "version": "1.0",
+
+  "browser_action": {
+    "default_icon": {
+      "16": "/images/icons/16x16.png",
+      "19": "/images/icons/19x19.png",
+      "24": "/images/icons/24x24.png",
+      "32": "/images/icons/32x32.png",
+      "38": "/images/icons/38x38.png"
+    }
+  },
+  "options_page": "/src/options.html",
+  "content_scripts": [
+    {
+      "matches": ["https://drive.google.com/drive/*"],
+      "js": ["/lib/rclone-js/rclone.js", "/src/apps/gdrive.js"]
+    }
+  ],
+  "icons": {
+    "16": "/images/icons/16x16.png",
+    "48": "/images/icons/48x48.png",
+    "128": "/images/icons/128x128.png"
+  },
+  "permissions": [
+    "storage"
+  ]
+}

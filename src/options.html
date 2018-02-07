@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Rclone Decrypter</title>
+    <link rel="stylesheet" href="/lib/material-design-lite/material.light_blue-blue.min.css" />
+    <style>
+      body { margin: 0 20px; }
+      .mdl-textfield { width: 500px; }
+    </style>
+  </head>
+  <body>
+    <h1>Rclone file name decryptor</h1>
+    <h3>Enter passwords from <code>rclone.conf</code> to decrypt</h2>
+    <form>
+      <div>
+        <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+          <input class="mdl-textfield__input" id="password">
+          <label class="mdl-textfield__label" for="password">Password 1</label>
+        </div>
+      <div>
+        <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+          <input class="mdl-textfield__input" id="salt">
+          <label class="mdl-textfield__label" for="salt">Password 2 (Salt)</label>
+        </div>
+      </div>
+      <div class="submit">
+        <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">Save</button>
+      </div>
+    </form>
+    <script src="/lib/material-design-lite/material.min.js"></script>
+    <script src="/options.js"></script>
+  </body>
+</html>
