@@ -2,7 +2,7 @@
   "manifest_version": 2,
   "name": "Rclone decrypter",
   "description": "This extension allows the user to decrypt filenames encrypted by Rclone.",
-  "version": "1.0",
+  "version": "1.0.1",
 
   "browser_action": {
     "default_icon": {
